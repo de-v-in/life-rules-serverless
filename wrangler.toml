@@ -1,0 +1,13 @@
+name = "life-rules"
+main = "build/worker/shim.mjs"
+compatibility_date = "2022-01-20"
+kv_namespaces = [
+  { binding = "KV_LIFE_RULES", preview_id = "05038bc8218d4c7e8ab428f92c1cc559", id = "7f1f9eb010104d3d944f19ba646eec4c" }
+]
+
+[vars]
+WORKERS_RS_VERSION = "0.0.11"
+
+[build]
+command = "cargo install -q worker-build --version 0.0.7 && worker-build --release"
+
